@@ -1,0 +1,32 @@
+/* ძირითადი სტილი */
+body {
+    background-color: #f4f4f4;
+}
+
+/* მარცხენა სექცია */
+.left {
+    background-color: #ffe4b5;
+    text-align: left;
+}
+
+/* ცენტრალური სექცია */
+.center {
+    background-color: #fff;
+    text-align: center; /* ტექსტი ცენტრში */
+}
+
+/* მარჯვენა სექცია */
+.right {
+    width: 20%; /* სექციის სიგანე */
+    background-color: #ffe4b5;
+    text-align: right; /* ტექსტი მარჯვნივ */
+}
+
+/* დამატებითი გაფორმება */
+h1 {
+    color: #2c3e50;
+}
+
+h2 {
+    color: #8b4513;
+}

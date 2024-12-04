@@ -1,0 +1,83 @@
+<!-- 5) ავაგთ ვებსაიტი form ების გამოენბთ, 
+გვქონდეს შესასველელი ფორმა,
+ (login) 
+
+სარეგისტრაციო ფორმა
+(registration)
+
+წააგავდეს, facebook-ს ვებსაიტს/ ან რასაც გინდა იამს წააგავდეს -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login and Registration</title>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <h1>Welcome to SocialConnect</h1>
+        <p>Connect with friends and the world around you.</p>
+    </header>
+
+    <hr>
+
+    <!-- Main Content -->
+    <main>
+        <h2>Login</h2>
+        <form action="/login" method="post">
+            <p>
+                <label for="login-email">Email:</label><br>
+                <input type="email" id="login-email" name="email" placeholder="Enter your email" required>
+            </p>
+            <p>
+                <label for="login-password">Password:</label><br>
+                <input type="password" id="login-password" name="password" placeholder="Enter your password" required>
+            </p>
+            <p>
+                <input type="submit" value="Log In">
+            </p>
+            <p>
+                <a href="#">Forgot password?</a>
+            </p>
+        </form>
+
+        <hr>
+
+        <h2>Register</h2>
+        <form action="/register" method="post">
+            <p>
+                <label for="first-name">First Name:</label><br>
+                <input type="text" id="first-name" name="first_name" placeholder="Enter your first name" required>
+            </p>
+            <p>
+                <label for="last-name">Last Name:</label><br>
+                <input type="text" id="last-name" name="last_name" placeholder="Enter your last name" required>
+            </p>
+            <p>
+                <label for="register-email">Email:</label><br>
+                <input type="email" id="register-email" name="email" placeholder="Enter your email" required>
+            </p>
+            <p>
+                <label for="register-password">Password:</label><br>
+                <input type="password" id="register-password" name="password" placeholder="Enter a password" required>
+            </p>
+            <p>
+                <label for="birthdate">Date of Birth:</label><br>
+                <input type="date" id="birthdate" name="birthdate" required>
+            </p>
+            <p>
+                <input type="submit" value="Sign Up">
+            </p>
+        </form>
+    </main>
+
+    <hr>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 SocialConnect. All rights reserved.</p>
+    </footer>
+</body>
+</html>

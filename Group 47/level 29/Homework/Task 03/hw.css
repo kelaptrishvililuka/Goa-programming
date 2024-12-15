@@ -1,0 +1,103 @@
+/* General page styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #101010;
+    color: #ffffff;
+}
+
+/* Header Styling */
+header {
+    background-color: #1f1f1f;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+header h1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 2.5rem;
+    color: #ff0000; /* Red to match Venom's theme */
+}
+
+nav {
+    margin-top: 20px;
+}
+
+nav a {
+    color: #ffffff;
+    margin: 0 15px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #ff0000; /* Red hover effect for links */
+}
+
+/* Main section styling */
+main {
+    padding: 30px;
+    background-color: #181818;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-Venom {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    text-align: justify;
+    color: #ddd;
+}
+
+.about-Venom p {
+    margin-bottom: 20px;
+}
+
+.about-Venom em {
+    color: #ff0000;
+}
+
+/* Image Styling */
+.img1 {
+    width: 100%;
+    max-width: 800px;
+    margin: 20px 0;
+    display: block;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Footer styling */
+footer {
+    background-color: #1f1f1f;
+    padding: 20px;
+    text-align: center;
+    font-size: 1rem;
+    color: #888;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    nav a {
+        font-size: 1rem;
+    }
+
+    .about-Venom {
+        font-size: 1.1rem;
+    }
+}

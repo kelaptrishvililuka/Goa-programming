@@ -1,0 +1,47 @@
+.container {
+    width: 1280px;
+    margin: 0 auto;
+}
+
+body {
+    font-family: "Roboto", serif;
+    font-weight: 400;
+    font-style: normal;
+    background-color: rgba(158, 138, 14, 0.594);
+}
+
+h1 {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    color: rgba(20, 220, 203, 0.731);
+    margin-bottom: 30px;
+}
+
+
+
+.p1 {
+    font-size: 20px;
+    color: red;
+}
+
+.img1 {
+    width: 600px;
+    margin-left: 370px;
+}
+
+.p2 {
+    text-align: center;
+    font-family: "Poppins", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+    
+}
+footer {
+    background-color: #222222;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+}

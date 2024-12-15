@@ -5,8 +5,6 @@ surname = "keleptrishvili"  #str
 
 print(name + surname) # კონკატინაცია.
 
-
-
 # option 2
 
 print("luka" + "keleptrishvili") # კონკატინაცია.

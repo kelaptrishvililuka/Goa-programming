@@ -5,17 +5,10 @@ speed(10000000000000000000 * 100000000000000)
 
 setworldcoordinates(-1000, -1000, 1000, 1000)
 
-
-
-
-
-
-
 begin_fill()
 
 width(3)
 color("#e3dcc2")
-
 
 left(5)
 forward(7)

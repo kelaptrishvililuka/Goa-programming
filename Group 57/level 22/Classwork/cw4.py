@@ -1,17 +1,18 @@
 # 4) მომხმარებელს შემოატანინეთ რიცხვი შემდეგ კი ერთიდან ამ რიცხვამდე დაბეჭდეთ მხოლოდ 5 ის ჯერადი რიცხვების ჯამი ცალკე და მხოლოდ 3ის ჯერადი რიცხვების ჯამი ცალკე, გამოიყენეთ while loop.
 
-x = int(input("enter number: "))
+num = int(input("enter your nmber:" ))
 
-multiple_of_5_sum = 0
-multiple_of_3_sum = 0
+sum = 0
+sum2 = 0
 
-i = 1
-while i <= x:
+i = 0
+
+while i < num:
     if i % 5 == 0:
-        multiple_of_5_sum += i
-    if i % 3 == 0:
-        multiple_of_3_sum += i
-    i += 1 
+        sum += i
+    elif i % 3 == 0:
+        sum2 += i
+    i += 1
 
-print("The sum of multiples of 5:")
-print("The sum of multiples of 3:")
+print(sum)
+print(sum2)

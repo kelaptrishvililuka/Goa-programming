@@ -1,10 +1,11 @@
 # 2) მომხმარებელს შემოატანინეთ რიცხვი შემდეგ კი ერთიდან ამ რიცხვამდე დაბეჭდეთ მხოლოდ ლუწი რიცხვების ჯამი, გამოიყენეთ for loop.
 
-k = int(input("enter number: "))
+num = int(input("Enter Your Number: "))
 
-sum_even = 0
-for i in range(1, k + 1):
+sum = 0
+
+for i in range(num):
     if i % 2 == 0:
-        sum_even += i
+        sum += i
 
-print("sum of even numbers: " + str(sum_even))
+print(sum)

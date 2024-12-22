@@ -6,4 +6,4 @@ num = int(input("enter number: "))
 if num % 3 == 0:
     print("aris 3 jeradi")
 else:
-     print("ar aris 3 jeradi")
+    print("ar aris 3 jeradi")

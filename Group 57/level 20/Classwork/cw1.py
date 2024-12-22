@@ -3,20 +3,29 @@
 # დაატრიალეთ ციკლი რომელიც 100 დან დაითვლის უკან 10 მდე
 # დაატრიალეთ ციკლი 20 დან 60 მდე ისერომ ყოველ ჯერზე i გაიზარდოს 4 ით
 
+
+# Task 1
+
 for i in range(0, 100, 2):
     print(i)
 
     print(" ")
+
+# Task 2
 
 for i in range(1, 100, 3):
     print(i)
 
 print(" ")
 
+# Task 3
+
 for i in range(100, 0):
     print(i)
 
 print(" ")
+
+# Task 4
 
 for i in range(20, 60, 4):
     print(i)

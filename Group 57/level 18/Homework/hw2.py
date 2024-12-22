@@ -5,4 +5,4 @@ num = int(input("enter number: "))
 if num % 5 == 0:
     print("aris 5 jeradi")
 else:
-     print("ar aris 5 jeradi")
+    print("ar aris 5 jeradi")

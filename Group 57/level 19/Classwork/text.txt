@@ -1,0 +1,3 @@
+ul - unordered list - დაულაგებელი სია
+ol - ordered list - დალაგებული სია
+li - list item - სიის ელემენტი

@@ -4,36 +4,51 @@
 # დაატრიალეთ ციკლი while loop ის გამოყენებით რომელიც დაგვიბეჭდავს 5 დან 50მდე ხუთის ჯერად რიცხვებს if ის გარეშე
 # დაატრიალეთ ციკლი while loop ის გამოყენებით რომელიც დაგვიბეჭდავს 10 დან 50მდე რიცხვებს და გვერდით მიუწერს ლუწია თუ კენტი
 
+
+# Task 1
+
 i = 30
 
-while i < 70:   
+while i <= 70:
+    print(str(i) + "This is an even number")
+    i = i + 2
+
+
+# Task 2
+
+i = 1
+
+while i < 30:
+    print(str(i) + "This is an odd number")
+    i = i + 2
+
+
+# Task 3
+
+i = 5
+
+while i <= 50:
+    if i % 5 == 0:
+        print(str(i) + "is a multiple of 5")
+    i = i + 1
+
+
+# Task 4
+
+i = 5
+
+while i <= 50:
     print(i)
-    i += 2
+    i += 5
 
-u = 0
 
-while u < 30:
-    print(u)
-    u += 3
+# Task 5
 
-y = 5
+i = 10
 
-while y < 50:
-    if y % 5 == 0:
-        print(y)
-    y += 1
-
-t = 5
-
-while t < 50:        
-   print(t)
-   t += 5 
-
-r = 10
-
-while r < 50:
-    if r % 2 == 0:
-        print(str(r) + "-" + "even")
+while i <= 50:
+    if i % 2 == 0:
+        print(str(i) + "-" + "even")
     else:
-        print(str(r) + "-" + "odd")   
-    r += 1 
+        print(str(i) + "-" + "odd")
+    i += 1

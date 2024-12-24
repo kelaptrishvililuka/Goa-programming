@@ -1,7 +1,9 @@
 # 5) დაწერეთ ციკლი რომელიც ლუწს გამოიტანს " მე მიყვარს გოა" და კენტს " მე მიყვარს პროგრამირება".
 
-for i in range(1, 100):
+b = int(input("num:"))
+
+for i in range(0,b):
     if i % 2 == 0:
-        print(i, "მე მიყვარს გოა", sep="|")
+        print("l LOVE GOA")
     else:
-        print(i,"მე მიყვარს პროგრამირება", sep="|")
+        print("l LOVE proggraming")    

@@ -1,9 +1,9 @@
 # 15)შეიყვანეთ რიცხვი და დაბეჭდეთ ყველა რიცხვი, რომელიც ნაკლებია შეყვანილ რიცხვზე.
 
-num = int(input("enter a number: "))
+c = int(input("num"))
 
 i = 1
 
-while i < num:
+while i < c:
     print(i)
-    i -= 1
+    i += 1

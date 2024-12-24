@@ -4,6 +4,6 @@ i = int(input("enter a number: "))
 
 while i == i:
     if i > 0:
-        print("dadebiti")
+        print("Positive")
     else:
-        print("uaryofiti") 
+        print("Negative") 

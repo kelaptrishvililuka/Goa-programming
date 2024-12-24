@@ -1,7 +1,7 @@
 # 6)დაბეჭდე რიცხვები 1-დან 30-მდე, და გვერდით მიუწერე "ლუწია" თუ "კენტია".
 
-for i in range(1,30):
+for i in range(0,30):
     if i % 2 == 0:
-        print(i, "ლუწი", sep="|")
+        print(str(i) + "even")
     else:
-        print(i,"კენტი", sep="|")
+        print(str(i) + "odd")

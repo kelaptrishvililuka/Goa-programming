@@ -2,6 +2,7 @@
 
 nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-first_half = nums[:len(nums) // 2]
+new_num = nums[:5]
 
-print(first_half)
+print(nums)
+print(new_num)

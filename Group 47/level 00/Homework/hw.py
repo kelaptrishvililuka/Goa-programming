@@ -3,9 +3,11 @@ from turtle import *
 #we want to draw a house
 
 #step 1 draw a square
+shape("turtle")
 speed(3)
 width(7)
 color("purple")
+
 forward(200)
 left(90)
 
@@ -71,7 +73,7 @@ end_fill()
 
 #drawing a roof
 
-color("red")
+color("orange")
 penup()
 goto(200 , 200)
 pendown()

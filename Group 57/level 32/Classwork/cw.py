@@ -6,4 +6,4 @@ for i in range(len(list)):
     if list[i] % 5 == 0:
         print(list[i], "5 jeradi")
     elif list[i] % 3 == 0:
-        print(list[i], "3 jerdi")
+        print(list[i], "3 jeradi")

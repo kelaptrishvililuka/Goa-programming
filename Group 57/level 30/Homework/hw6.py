@@ -1,9 +1,12 @@
 # 6) მომხმარებელს შემოატანინეთ 5 რიცხვი და დაამატეთ ეს რიცხვები სიაში, ბოლოს გამოიტანეთ ტერმინალში ეს სია.
 
-user_numbers = []
+list = []
 
-for i in range(5):
-    number = int(input("Enter Your Number: "))
-    user_numbers.append(number)
+i = 0
 
-print(user_numbers)    
+while i < 5:
+    num = int(input("Enter Your Number: "))
+    list.append(num)
+    i += 1
+
+print(list)      

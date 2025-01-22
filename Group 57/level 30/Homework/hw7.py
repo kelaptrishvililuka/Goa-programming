@@ -1,8 +1,11 @@
 # 7) დაიწყეთ რიცხვების სიით, გამოიყენეთ while loop რომ წაშალოთ ყველა რიცხვი ამ სიიდან და გამოიყენეთ pop რო დაპრინტოთ ეს ყველა ელემენტი სანამ ლისტი არ დაცარიელდება.
 
-numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+num = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-while numbers:
-    number = numbers.pop()
+i = 0
 
-print(number)    
+while i < len(num):
+    del_num = int(input("What Do You Want To Delete: "))
+    num.pop(del_num)
+
+print(num)    

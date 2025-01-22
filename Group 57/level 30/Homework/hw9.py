@@ -1,7 +1,7 @@
 # 9) გამოიყენეთ append და pop რომ დაატრიალოთ ლისტი და დაპრინტეთ შემდეგ.
 
 shopping_list = [1, 2, 3, 4, 5]
-reversed_list = []
+reversed_list = []   # შემობრუნებული ლისტი.
 
 while shopping_list:
     item = shopping_list.pop()

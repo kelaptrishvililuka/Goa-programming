@@ -4,11 +4,8 @@ num = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
 Odd_num = []
 
-for num in num:
-    if num % 2 != 0: 
-        Odd_num.append(num)  
+for i in range(len(num)):
+    if num[i] % 2 != 0:
+        Odd_num += num[i]
 
-Odd_numbers = sum(Odd_num)
-
-for _ in range(10):
-    print(Odd_numbers)
+print(Odd_num)

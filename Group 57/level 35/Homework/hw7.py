@@ -1,8 +1,10 @@
 # 7) შექმენით ფუნქცია რომელიც მომხმარებელს შეეკითხება რიცხვს შემდეგ კი დაბეჭდავს ეს რიცხვი ლუწია თუ კენტი.
 
-def check_even_or_odd():
-    num = int(input("Enter a number: "))
-    result = num % 2
-    print("Number " + str(num) + " is " + ("Even" * (result == 0)) + ("odd" * (result != 0)))
+def even_or_odd():
+    x = int(input("Enter a Number: "))
+    if x % 2 == 0:
+        print("Even")
+    else:
+        print("Odd")
 
-check_even_or_odd()
+even_or_odd()

@@ -1,9 +1,9 @@
 # 3) შექმენით ფუნქცია რომელიც მომხმარებელს შეეკითხება ორ რიცხვს შემდეგ კი მათ დაუმატებთ ერთმანეთს.
 
+# ფუნქციას უნდა დავარქვათ ისეთი სახელი რაც შეესაბამება მის დანიშნულებას!
 def add_two_numbers():
-    num1 = int(input("Enter the first number: "))
-    num2 = int(input("Enter the second number: "))
-    result = num1 + num2
-    print("The sum of both numbers is: " + str(result))
+    x = int(input("Enter First Number: "))
+    y = int(input("Enter Second Number: "))
+    print(x + y)
 
 add_two_numbers()

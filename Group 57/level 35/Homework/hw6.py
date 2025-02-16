@@ -1,9 +1,9 @@
 # 6) შექმენით ფუნქცია რომელიც მომხმარებელს შეეკითხება ორ რიცხვს შემდეგ კი მათ გაყოფს ერთმანეთზე.
 
-def divide_two_numbers():
-    num1 = int(input("Enter the first number: "))
-    num2 = int(input("Enter the second number: "))
-    result = num1 / num2
-    print("The first number is divided by the second number: " + str(result))
+# ფუნქციას უნდა დავარქვათ ისეთი სახელი რაც შეესაბამება მის დანიშნულებას!
+def divide():
+    x = int(input("Enter First Number: "))
+    y = int(input("Enter Second Number: "))
+    print( x / y)
 
-divide_two_numbers()
+divide()

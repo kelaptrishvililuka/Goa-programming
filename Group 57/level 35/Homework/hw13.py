@@ -1,16 +1,11 @@
 # 13) შექმენით ფუნქცია რომელშიც იქნება რიცხვებით სავსე სია შემდეგ კი დაბეჭდავს ამ სიაში არსებული რიცხვების ჯამს.
 
 def sum_of_numbers_in_list():
-    numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 76, 54, 79, 42, 54, 879, 989, 243, 123, 8789, 467, 956, 698, 265, 198, 629, 25, 47, 23, 79, 80, 75]
 
-    total_sum = 0
-
-    i = 0
-    while i < len(numbers):
-        total_sum += numbers[i]
-        i += 1
-    
-    result = "Sum of numbers: " + str(total_sum)
-    print(result)
+    sum = 0
+    for i in range(len(list)):
+        sum += list[i]
+    print(sum)
 
 sum_of_numbers_in_list()

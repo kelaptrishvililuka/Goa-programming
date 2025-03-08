@@ -1,0 +1,11 @@
+.name {
+    color: red;
+    font-size: 24px;
+    text-align: center;
+}
+
+.surname {
+    color: aqua;
+    font-size: 28px;
+    text-align: center;
+}

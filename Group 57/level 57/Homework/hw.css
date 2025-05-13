@@ -1,0 +1,47 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background: #f8f8f8;
+  margin: 0;
+  padding: 20px;
+}
+
+.profile .avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+
+h1 {
+  margin: 10px 0 5px;
+}
+
+.desc {
+  color: gray;
+  font-size: 14px;
+}
+
+.cards {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+}
+
+.card {
+  background: white;
+  padding: 15px;
+  width: 90%;
+  max-width: 400px;
+  border-radius: 10px;
+  display: flex;
+  gap: 15px;
+  box-shadow: 0 2px 4px rgba(239, 11, 11, 0.1);
+}
+
+.card img.icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 10px;
+}

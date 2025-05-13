@@ -1,0 +1,48 @@
+<!--1) შექმენით div ბლოკი, რომელიც პირობითად იქნება 1 სექცია მოგზაურობის ტურის საიტის, ამ სექციაში უნდა იყოს: h1, p, button, img. css-ით div-ს გაუწერეთ border, width, height, background-image. ფონის სურათი შეცვალეთ background-repeat, background-position და background-size კუთვნილებების საშვალებით, თითოეული background ქვე კუთვნილება ახსენით კომენტარებით თუ რას აკეთებს და რამნიშვნელობები გადაეცემა, მაგალითად x, y. width, height -->
+
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-image: url('https://t4.ftcdn.net/jpg/05/45/42/81/360_F_545428173_uyYWJoR9n5uJFYIWfDa2C49AzIECcU20.jpg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        div {
+            border: 5px solid red;
+            width: 500px;
+            height: 500px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        button {
+            background-color: black;
+            color: white;
+            width: 100px;
+            height: 30px;
+            border: none;
+            cursor: pointer;
+            font-family: "Courier New", Courier, monospace;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <button>click me!</button>
+    </div>
+</body>
+</html>

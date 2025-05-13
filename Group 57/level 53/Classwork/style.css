@@ -1,0 +1,26 @@
+.box1 {
+    width: 150px;
+    height: 100px;
+    background-color: #ff9999;
+    position: absolute;
+    left: 150px;
+    top: 200px;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+.box2 {
+    width: 150px;
+    height: 100px;
+    background-color: #99ff99;
+    position: absolute;
+    left: 100px;
+    top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}

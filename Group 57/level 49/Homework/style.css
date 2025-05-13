@@ -1,73 +1,53 @@
-
-* {
-    font-family: sans-serif;
+body {
+    background-color: #141414;
+    color: white;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
     margin: 0;
-    font-weight: bold;
-    color: rgb(255, 255, 255);
-  }
-  html,
-  body {
-    margin: 0;
-    height: 100%;
-  }
-  .full-heigth {
-    height: 100%;
-    background: #141414;
-  }
-  section{
-    margin-top: 25px;
-  }
-  .content {
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background: #1f1f1f;
-    width: 380px;
-    height: 610px;
-    border-radius: 15px;
-  }
-  .info {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 5px;
-  }
-  .info,
-  p {
-    margin-bottom: 20px;
-  }
-  img {
-    margin: auto;
-    border-radius: 50%;
-    width: 100px;
-  }
-  .location {
-    color: #b9cc6c;
-  }
-  .job {
-    color: #a9a9a9;
-  }
-  .content,
-  div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-bottom: 10px;
-  }
-  button {
+}
+#card {
+    background-color: #1f1f1f;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
     width: 300px;
-    height: 40px;
-    border-radius: 5px;
-    border: none;
-    background-color: #333333;
-    margin-bottom: 13px;
-    transition: all 0.5s;
-  }
-  button:hover{
-      background: #434343;
-      width: 310px;
-      height: 45px;
-      margin-top: -5px;
-      cursor: pointer;
-  }  
+    transition: 0.5s;
+}
+#profile-image {
+    width: 100px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 16px;
+}
+h1 {
+    font-size: 40px;
+    margin: 10px 0;
+}
+h2 {
+    color: #c2d56c;
+    font-size: 18px;
+    margin: 5px 0 16px;
+}
+P {
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+#btn a {
+    display: block;
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+    padding: 12px;
+    margin: 10px;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+#btn a:hover {
+    background-color: #555;
+}
+#card:hover {
+    background-color: grey;
+}

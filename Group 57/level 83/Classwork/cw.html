@@ -1,0 +1,64 @@
+<!-- 1)შეცვალეთ საიტის უკანა ფონის ფერები თუ ერანის ზომა ნაკლებია 480px ზე გახდეს მწვანე, 640pxზე გახდეს ლურჯი, 768px ზე გახდეს ცისფერი, 1024px ზე გახდეს ყვითელი, 1280px ზე გახდეს სტაფილოსფერი, 1536px ზე გახდეს წითელი -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        @media (max-width: 479px) {
+            body {
+                background-color: green;
+            }
+        }
+
+        @media (min-width: 480px) and (max-width: 639px) {
+            body {
+                background-color: blue;
+            }
+        }
+
+        @media (min-width: 640px) and (max-width: 767px) {
+            body {
+                background-color: skyblue;
+            }
+        }
+
+        @media (min-width: 768px) and (max-width: 1023px) {
+            body {
+                background-color: yellow;
+            }
+        }
+
+        @media (min-width: 1024px) and (max-width: 1279px) {
+            body {
+                background-color: orange;
+            }
+        }
+
+        @media (min-width: 1280px) and (max-width: 1535px) {
+            body {
+                background-color: red;
+            }
+        }
+
+        @media (min-width: 1536px) {
+            body {
+                background-color: darkred;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>hello universe</h1>
+</body>
+
+</html>

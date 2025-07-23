@@ -1,26 +1,24 @@
+.box1, .box2 {
+    width: 200px;
+    height: 200px;
+    position: absolute; 
+    text-align: center;
+    line-height: 200px;
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(214, 79, 79);
+}
+
 .box1 {
-    width: 150px;
-    height: 100px;
-    background-color: #ff9999;
-    position: absolute;
+    background-color: red;
     left: 150px;
     top: 200px;
-    z-index: 2;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: bold;
+    z-index: 2;  
 }
 
 .box2 {
-    width: 150px;
-    height: 100px;
-    background-color: #99ff99;
-    position: absolute;
-    left: 100px;
-    top: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: bold;
+    background-color: blue;
+    left: 100px; 
+    top: 50px; 
+    z-index: 1;
 }

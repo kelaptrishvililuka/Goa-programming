@@ -1,0 +1,36 @@
+<!-- 1) შექმენით მშობელი parent div ბლოკი რომელშიც გექნებათ ერთი child div ბლოკი, მარტივად გასტილეთ ეს 2 დივი და შექმენით loading bar-ის პროტოტიპი გადასვლა transition, ამისთვის უნდა გამოიყენოთ transtion-duration კუთვნილება და child div ბლოკზე კურსორის მიტანისას ეს გადასვლა უნდა იწყებოდეს, ასევე შეცვალეთ გადასვლისას child div ბლოკის background ფერი -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         .parent {
+            width: 300px;
+            height: 30px;
+            background-color: #f0f0f0;
+            border-radius: 15px;
+            margin: 50px auto;
+            box-shadow: 0 2px 5px rgba(0,0,0);
+        }
+        .child {
+            width: 0;
+            height: 100%;
+            background-color: #4caf50;
+            border-radius: 15px;
+            transition: width 2s, background-color 2s;
+        }
+        .parent:hover .child {
+            width: 100%;
+            background-color: #ff5722;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="child">Loading</div>
+    </div>
+</body>
+</html>

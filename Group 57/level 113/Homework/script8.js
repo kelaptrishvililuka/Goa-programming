@@ -1,0 +1,7 @@
+// 8)შექმენი ობიექტი book = {title: "1984", author: "Orwell", pages: 328}
+//წაშალე pages  და კონსოლში დაბეჭდე ის  ქიები რომლებიც დარჩა ობიექტში.
+
+
+let book = {title: "1984", author: "Orwell", pages: 378}
+delete book.pages
+console.log(Object.keys(book))

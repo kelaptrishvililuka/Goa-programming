@@ -1,0 +1,1 @@
+# no hw bc Write down all the questions from both Kahoots given in class and discuss them in detail. There were 65 questions in total.

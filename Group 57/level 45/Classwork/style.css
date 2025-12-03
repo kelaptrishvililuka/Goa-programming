@@ -1,0 +1,22 @@
+/* 1) ღილაკი 20px padding-ით */
+.custom-button {
+    padding: 20px;
+}
+
+/* 2) ორი პარაგრაფი 30px margin-ით */
+.paragraph-with-margin {
+    margin-bottom: 30px;
+}
+
+/* 3) ყუთი წითელი, 5px სისქის საზღვრით */
+.red-border-box {
+    border: 5px solid rgb(156, 245, 169);
+    width: 200px;
+    height: 200px;
+}
+
+/* 4) div, რომელშიც ტექსტი ცენტრშია განლაგებული */
+.centered-text-box {
+    height: 100px;
+    border: 1px solid rgb(210, 149, 165);
+}

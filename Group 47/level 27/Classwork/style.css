@@ -1,0 +1,16 @@
+#p {
+    background-color: #000;
+}
+
+.paragraph {
+    font-size: larger;
+    text-decoration-color: #823844
+}
+
+html {
+    background-color: rgb(47, 87, 74);
+}
+
+body {
+    background-color: hsl(100, 29%, 100%);
+}

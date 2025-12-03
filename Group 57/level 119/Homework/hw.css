@@ -1,0 +1,39 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background: navy;
+    color: white;
+    margin: 0;
+    padding: 20px;
+}
+
+#counter {
+    font-size: 80px;
+    margin: 20px 0;
+    color: white;
+}
+
+button {
+    font-size: 24px;
+    padding: 15px 25px;
+    margin: 10px;
+    cursor: pointer;
+    background-color: blue;
+    border: solid;
+    border-color: blue;
+}
+
+#reset {
+    background-color: navy;
+}
+
+#bigImage {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+    display: none;
+}

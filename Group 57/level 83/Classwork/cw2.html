@@ -1,0 +1,32 @@
+<!-- 2)დაამატეთ საიტზე ორი ფოტო, თითოეული მათგანის სიგანე იყოს 450px, რომლებიც იქნებიან ჰორიზონტალურად განლაგებულები ხოლო როდესაც ეკრანის ზომა იქნება 1000px ზე ნაკლები ეს ორი ფოტო განლაგდეს ვერტიკალურად -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            width: 450px;
+        }
+
+        @media (max-width: 1000px) {
+            .images {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <img src="https://cdn.pixabay.com/photo/2021/12/12/20/00/play-6865967_640.jpg" alt="image 1">
+        <img src="https://images.unsplash.com/photo-1494253109108-2e30c049369b?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8cmFuZG9tfGVufDB8fDB8fHww"
+            alt="image 2">
+    </div>
+</body>
+
+</html>

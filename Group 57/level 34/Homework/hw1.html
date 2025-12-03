@@ -1,0 +1,64 @@
+<!-- 1) შექმენით ნებისმიერ თემატიკაზე საიტი და გასტილეთ აუცილებლად შეცვლილი ქონდეს ფერი, ზომა, ასევე ქონდეს ჩარჩო ჩარჩს კუთხეები მოუმრგვალეთ, კიდევ გამოიყენეთ video audio , img -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore the Solar System website</title>
+    <style>
+        body {
+            background-color: #1a1a40;
+        }
+
+        h1 {
+            color: #ffcc00;
+        }
+
+        .planet-box {
+            background-color: #f7fcfd;
+        }
+
+        img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+
+        audio,
+        video {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Welcome to the Solar System</h1>
+
+    <div class="planet-box">
+        <h2>The Majestic Jupiter</h2>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Jupiter_and_its_shrunken_Great_Red_Spot.jpg/290px-Jupiter_and_its_shrunken_Great_Red_Spot.jpg"
+            alt="Jupiter Image">
+        <p>Jupiter is the largest planet in our solar system. It is known for its massive storms, including the famous
+            Great Red Spot.</p>
+    </div>
+
+    <div class="planet-box">
+        <h2>Listen to the Sounds Deep Space Galaxy</h2>
+        <audio controls>
+            <source src="./1 Minute Countdown Timer with Alarm and Deep Space Ambient Music  Deep Space Galaxy.mp3"
+                type="audio/ogg">
+            Your browser does not support this audio element.
+            <a href="https://www.w3schools.com/Tags/tag_audio.asp">For more information about audio tag</a>
+        </audio>
+    </div>
+
+    <div class="planet-box">
+        <h2>Watch the Universe in Stunning New Universe</h2>
+        <video controls autoplay height="350px" loop poster preload>
+            <source src="./Stunning New Universe Fly-Through Really Puts Things Into Perspective.mp4" type="video/mp4">
+            Your browser does not support this video element.
+            <a href="https://www.w3schools.com/Tags/tag_video.asp">For more information about video tag</a>
+        </video>
+    </div>
+</body>

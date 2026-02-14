@@ -1,0 +1,110 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: radial-gradient(circle at top, #1f3756, #141539);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header {
+    border: 3px solid #606e85;
+    border-radius: 10px;
+    padding: 20px 30px;
+    width: 600px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+.title p {
+    margin: 0;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.score-box {
+    background: white;
+    color: #2a46c0;
+    width: 120px;
+    border-radius: 8px;
+    text-align: center;
+    padding: 10px;
+}
+
+.score-box span {
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+.score-box h1 {
+    margin: 0;
+    font-size: 48px;
+    color: #3b4363;
+}
+
+.game {
+    position: relative;
+    width: 400px;
+    height: 350px;
+    margin-top: 80px;
+}
+
+.triangle {
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    width: 300px;
+    height: 260px;
+    background: url("https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Triangle.svg/512px-Triangle.svg.png") no-repeat center;
+    background-size: contain;
+    transform: translateX(-50%);
+    opacity: 0.2;
+}
+
+.choice {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 15px solid;
+    background: white;
+    font-size: 40px;
+    cursor: pointer;
+    position: absolute;
+}
+
+.paper {
+    border-color: #5671f5;
+    top: 0;
+    left: 0;
+}
+
+.scissors {
+    border-color: #eca922;
+    top: 0;
+    right: 0;
+}
+
+.rock {
+    border-color: #dd405d;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.rules {
+    margin-top: auto;
+    margin-bottom: 30px;
+    background: transparent;
+    color: white;
+    border: 2px solid #606e85;
+    padding: 10px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+}

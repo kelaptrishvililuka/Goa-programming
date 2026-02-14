@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <style>
+        .snowflake {
+            position: fixed;
+            top: -10%;
+            left: 50%;
+            font-size: 1em;
+            color: #fff;
+            user-select: none;
+            pointer-events: none;
+            animation: fall 10s linear infinite, sway 3s ease-in-out infinite;
+        }
+
+        @keyframes fall {
+            0% {
+                top: -10%;
+                opacity: 1;
+            }
+
+            100% {
+                top: 110%;
+                opacity: 0.5;
+            }
+        }
+
+        @keyframes sway {
+            0% {
+                transform: translateX(0);
+            }
+
+            50% {
+                transform: translateX(80px);
+            }
+
+            100% {
+                transform: translateX(0);
+            }
+        }
+    </style>
+
+    <div class="snowflake">❄</div>
+    <div class="snowflake" style="left: 20%; font-size:1.5em;">❄</div>
+    <div class="snowflake" style="left: 80%; font-size:0.8em;">❄</div>
+
+
+    <canvas id="snow"></canvas>
+
+    <style>
+        #snow {
+            position: fixed;
+            inset: 0;
+            width: 100vw;
+            height: 100vh;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        /* If you want it ABOVE content, set z-index high (e.g. 9999) */
+
+        /* Respect users who prefer less motion */
+        @media (prefers-reduced-motion: reduce) {
+            #snow {
+                display: none;
+            }
+        }
+    </style>
+
+    <script>
+        (() => {
+            const canvas = document.getElementById("snow");
+            const ctx = canvas.getContext("2d", { alpha: true });
+
+            let w, h, dpr;
+            function resize() {
+                dpr = Math.max(1, Math.min(2, window.devicePixelRatio || 1)); // cap for perf
+                w = Math.floor(window.innerWidth);
+                h = Math.floor(window.innerHeight);
+                canvas.width = Math.floor(w * dpr);
+                canvas.height = Math.floor(h * dpr);
+                canvas.style.width = w + "px";
+                canvas.style.height = h + "px";
+                ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+            }
+            window.addEventListener("resize", resize, { passive: true });
+            resize();
+
+            // Tune these
+            const settings = {     // flakes per pixel (higher = more snow)
+                minR: 0.8,            // min radius
+                maxR: 3.2,            // max radius
+                baseSpeed: 0.35,      // fall speed
+                wind: 0.12,           // base wind
+                gust: 0.35,           // gust strength
+                sway: 0.6,            // sideways oscillation
+                blurMax: 0.8          // subtle softness
+            };
+
+            const flakes = [];
+            function rand(min, max) { return Math.random() * (max - min) + min; }
+
+            function targetCount() {
+                return Math.floor(w * h * settings.density);
+            }
+
+            function makeFlake(spawnTop = false) {
+                const r = rand(settings.minR, settings.maxR);
+                const layer = r / settings.maxR; // 0..1 "depth"
+                return {
+                    x: rand(0, w),
+                    y: spawnTop ? rand(-h, 0) : rand(0, h),
+                    r,
+                    vy: settings.baseSpeed + layer * 1.2 + rand(0, 0.6),
+                    vx: (settings.wind + rand(-0.08, 0.08)) * (0.5 + layer * 1.2),
+                    phase: rand(0, Math.PI * 2),
+                    spin: rand(0.002, 0.01),
+                    layer,
+                    opacity: 0.25 + layer * 0.65
+                };
+            }
+
+            function syncFlakes() {
+                const want = targetCount();
+                while (flakes.length < want) flakes.push(makeFlake(true));
+                while (flakes.length > want) flakes.pop();
+            }
+            syncFlakes();
+
+            // Wind that changes over time (gusts)
+            let t = 0;
+            function windAt(time) {
+                const slow = Math.sin(time * 0.00035) * settings.gust;
+                const fast = Math.sin(time * 0.0012) * (settings.gust * 0.35);
+                return settings.wind + slow + fast;
+            }
+
+            let last = performance.now();
+            function frame(now) {
+                const dt = Math.min(32, now - last); // clamp
+                last = now;
+                t += dt;
+
+                ctx.clearRect(0, 0, w, h);
+
+                const wind = windAt(t);
+                const blur = Math.min(settings.blurMax, Math.abs(wind) * 0.4);
+                ctx.filter = blur > 0.05 ? `blur(${blur}px)` : "none";
+
+                // draw
+                for (let i = 0; i < flakes.length; i++) {
+                    const f = flakes[i];
+
+                    // motion
+                    f.phase += f.spin * dt;
+                    const sway = Math.sin(f.phase) * settings.sway * (0.6 + f.layer);
+
+                    f.x += (f.vx + wind * (0.3 + f.layer)) * dt * 0.06 + sway * dt * 0.01;
+                    f.y += f.vy * dt * 0.06;
+
+                    // wrap around edges
+                    if (f.y - f.r > h) {
+                        f.y = -f.r - rand(0, 30);
+                        f.x = rand(0, w);
+                    }
+                    if (f.x < -20) f.x = w + 20;
+                    if (f.x > w + 20) f.x = -20;
+
+                    // paint (soft circle)
+                    ctx.beginPath();
+                    ctx.fillStyle = `rgba(255,255,255,${f.opacity})`;
+                    ctx.arc(f.x, f.y, f.r, 0, Math.PI * 2);
+                    ctx.fill();
+                }
+
+                ctx.filter = "none";
+                requestAnimationFrame(frame);
+            }
+
+            // If user prefers reduced motion, don’t run
+            const reduce = window.matchMedia?.("(prefers-reduced-motion: reduce)");
+            if (!reduce || !reduce.matches) requestAnimationFrame(frame);
+
+            // Optional: expose a toggle
+            window.SNOW = {
+                setEnabled(on) {
+                    canvas.style.display = on ? "block" : "none";
+                },
+                setDensity(d) {
+                    settings.density = d;
+                    syncFlakes();
+                }
+            };
+        })();
+    </script>
+
+
+    <script src="cw.js"></script>
+</body>
+
+</html>

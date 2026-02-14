@@ -1,0 +1,62 @@
+input{
+    padding: 10px;
+    font-size: 15px;
+    margin: 5px;
+    width: 300px;
+}
+
+button{
+    font-size: 25px;
+}
+
+.error{
+    color: red;
+    font-size: 14px;
+    margin-left: 10px;
+}
+
+.field{
+    display: flex;
+    align-items: center;
+}
+
+input{
+    padding: 10px;
+    font-size: 15px;
+    margin: 5px;
+    width: 300px;
+}
+button{
+    font-size: 25px;
+}
+
+li{
+    font-size: 20px;
+    animation-name: colorchange;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    margin: 20px;
+}
+@keyframes colorchange{
+    10%{
+        color:red
+    }
+    20%{
+        color:orange
+    }
+    30%{
+        color:yellow
+    }
+    40%{
+        color:green
+    }
+    60%{
+        color:cyan
+    }
+    80%{
+        color:blue
+    }
+    100%{
+        color:violet
+    }
+}

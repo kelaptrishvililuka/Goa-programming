@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    padding: 40px;
+    color: #333;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 60px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.nav-right {
+    display: flex;
+    gap: 20px;
+}
+
+.cart-icon {
+    width: 24px;
+    cursor: pointer;
+}
+
+.avatar {
+    width: 40px;
+    border-radius: 50%;
+}
+
+.container {
+    display: flex;
+    gap: 80px;
+    align-items: center;
+}
+
+.product-images {
+    width: 400px;
+}
+
+.main-image {
+    width: 100%;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+.thumbnails {
+    display: flex;
+    gap: 10px;
+}
+
+.thumbnails img {
+    width: 80px;
+    border-radius: 10px;
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.thumbnails img:hover {
+    opacity: 1;
+}
+
+.product-info {
+    max-width: 450px;
+}
+
+.company {
+    color: orange;
+    font-size: 14px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.title {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.description {
+    color: gray;
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+.price {
+    margin-bottom: 30px;
+}
+
+.current {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 8px;
+}
+
+.new-price {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.discount {
+    background: #ffe8d9;
+    color: orange;
+    padding: 4px 8px;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.old-price {
+    text-decoration: line-through;
+    color: gray;
+}
+
+.cart-controls {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.quantity {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: #f7f8fd;
+    padding: 10px 15px;
+    border-radius: 10px;
+}
+
+.quantity button {
+    border: none;
+    background: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: orange;
+}
+
+.add-to-cart {
+    background: orange;
+    border: none;
+    padding: 15px 30px;
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 10px 20px rgba(255, 125, 26, 0.3);
+}
+
+.add-to-cart:hover {
+    opacity: 0.8;
+}

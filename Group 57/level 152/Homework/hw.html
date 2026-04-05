@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ToDo app</title>
+
+    <link rel="stylesheet" href="hw.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+
+</head>
+
+<body>
+
+    <div class="app-box">
+
+        <div class="header">
+            <h1>My Tasks</h1>
+            <p>Remaining tasks: <span id="taskCount">0</span></p>
+        </div>
+
+        <div class="input-area">
+            <input type="text" id="taskField" placeholder="Write new task...">
+            <button id="addBtn">
+                <ion-icon name="add-outline"></ion-icon>
+            </button>
+        </div>
+
+        <ul id="taskList"></ul>
+
+    </div>
+
+    <script src="hw.js"></script>
+
+</body>
+
+</html>

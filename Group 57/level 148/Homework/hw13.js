@@ -1,0 +1,15 @@
+// 13)მოცემულია მასივი სტუდენტების სახელებით:
+
+// const students = ["ანა", "ლაშა", "გიორგი", "ნინო"];
+
+// გამოიყენე reduce, რათა შექმნა ერთი სტრინგი, სადაც ყველა სახელი იქნება ხაზით -.
+
+// შედეგი უნდა იყოს: "ანა-ლაშა-გიორგი-ნინო".
+
+const students = ["ანა", "ლაშა", "გიორგი", "ნინო"];
+
+const allNames = students.reduce((accumulator, currentName) => {
+    return accumulator + "-" + currentName;
+});
+
+console.log(allNames);

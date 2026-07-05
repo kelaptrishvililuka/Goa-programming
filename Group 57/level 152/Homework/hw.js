@@ -7,25 +7,17 @@ class TaskApp {
 
         this.tasks = 0;
 
-        this.button.onclick = () => {
-            this.addTask();
-        }
+        this.button.onclick = () => this.addTask();
 
         this.input.addEventListener("keypress", (e) => {
-            if (e.key === "Enter") {
-                this.addTask();
-            }
-        })
-
+            if (e.key === "Enter") this.addTask();
+        });
     }
 
     addTask() {
+        let value = this.input.value;
 
-        let value = this.input.value.trim();
-
-        if (value === "") {
-            return;
-        }
+        if (value === "") return;
 
         let li = document.createElement("li");
         li.className = "task";
@@ -36,16 +28,13 @@ class TaskApp {
         let text = document.createElement("span");
         text.textContent = value;
 
+        let edit = document.createElement("button");
+        edit.textContent = "edit";
+
         let del = document.createElement("button");
-        del.className = "delete";
+        del.textContent = "remove";
 
-        let icon = document.createElement("ion-icon");
-        icon.name = "trash-outline";
-
-        del.appendChild(icon);
-
-        li.append(checkbox, text, del);
-
+        li.append(checkbox, text, edit, del);
         this.list.appendChild(li);
 
         this.input.value = "";
@@ -53,35 +42,60 @@ class TaskApp {
         this.tasks++;
         this.update();
 
-        checkbox.addEventListener("change", () => {
-
+        checkbox.onchange = () => {
             li.classList.toggle("done");
 
-            if (checkbox.checked) {
-                this.tasks--;
+            if (checkbox.checked === true) {
+                this.tasks = this.tasks - 1;
             } else {
-                this.tasks++;
+                this.tasks = this.tasks + 1;
             }
 
             this.update();
-
-        });
+        };
 
         del.onclick = () => {
             li.remove();
-            this.tasks--;
+
+            this.tasks = this.tasks - 1;
+
             if (this.tasks < 0) {
                 this.tasks = 0;
             }
-            this.update();
-        }
 
+            this.update();
+        };
+
+        edit.onclick = () => {
+            let inputField = document.createElement("input");
+            inputField.type = "text";
+            inputField.value = text.textContent;
+
+            li.replaceChild(inputField, text);
+
+            inputField.focus();
+
+            const save = () => {
+                if (inputField.value !== "") {
+                    text.textContent = inputField.value;
+                }
+
+                li.replaceChild(text, inputField);
+            };
+
+            inputField.addEventListener("keypress", (e) => {
+                if (e.key === "Enter") save();
+            });
+
+            inputField.addEventListener("blur", () => {
+                save();
+            });
+        };
     }
 
     update() {
         this.count.textContent = this.tasks;
     }
-
 }
 
 new TaskApp();

@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.weather-cont {
+    width: 100%;
+    height: 100vh;
+    background-image: url(./Winter-background.webp);
+    background-size: cover;
+}
+
+.weather-inf {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}

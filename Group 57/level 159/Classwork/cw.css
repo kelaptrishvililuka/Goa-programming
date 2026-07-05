@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: black;
+    color: white;
+    font-family: Arial;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    width: 700px;
+    margin-top: 30px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 45px;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+
+.logo-icon {
+    width: 40px;
+}
+
+.progress-card {
+    border: 1px solid #9f8f75;
+    border-radius: 15px;
+    padding: 25px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.progress-card h2 {
+    font-size: 48px;
+}
+
+.progress-card p {
+    font-size: 30px;
+}
+
+.circle {
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    background: #9bc12e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 55px;
+}
+
+.input-box {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.input-box input {
+    flex: 1;
+    padding: 20px;
+    background: #172133;
+    border: none;
+    color: white;
+    border-radius: 12px;
+}
+
+.input-box button {
+    width: 70px;
+    background: #9bc12e;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.input-box img {
+    width: 30px;
+}
+
+.task {
+    border: 1px solid #9f8f75;
+    padding: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.check {
+    width: 28px;
+    height: 28px;
+    border: 2px solid #00ff88;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.done {
+    background: #00d26a;
+}
+
+.completed {
+    text-decoration: line-through;
+    opacity: 0.7;
+}
+
+.actions i {
+    font-size: 22px;
+    cursor: pointer;
+    margin-left: 15px;
+}

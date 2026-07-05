@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Todo App</title>
+    <link rel="stylesheet" href="cw.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="logo">
+            <img src="check.png" class="logo-icon">
+            <span>TODO</span>
+        </div>
+
+        <div class="progress-card">
+            <div>
+                <h2>Task Done</h2>
+                <p>Keep it up</p>
+            </div>
+            <div class="circle" id="counter">0/0</div>
+        </div>
+
+        <div class="input-box">
+            <input type="text" id="taskInput" placeholder="Write your next task">
+            <button id="addBtn">
+                <img src="plus.png">
+            </button>
+        </div>
+
+        <div id="taskList"></div>
+
+    </div>
+
+    <script src="cw.js"></script>
+</body>
+
+</html>
